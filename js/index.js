@@ -60,7 +60,7 @@ class Spel {
     //methode die nagaat of het aantal opgegeven vakjes even is. Indien ja: start spel. Indien nee: geef warning.
     test() {
         if (this.aantal % 2 === 0) {
-            //warning verbergen
+            //eventuele vorige warning verbergen
             document.getElementById("alertWarning").classList.replace("alert-show", "alert-hide")
             this.start()
         } else {
