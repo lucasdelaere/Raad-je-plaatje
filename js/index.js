@@ -57,7 +57,7 @@ class Spel {
         //spel starten indien voorwaarden van test voldaan zijn
         this.test()
     }
-    //methode die nagaat of het aantal opgegeven vakjes even is en desnoods een warning weergeeft
+    //methode die nagaat of het aantal opgegeven vakjes even is. Indien ja: start spel. Indien nee: geef warning.
     test() {
         if (this.aantal % 2 === 0) {
             //warning verbergen
