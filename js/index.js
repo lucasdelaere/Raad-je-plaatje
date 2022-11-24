@@ -55,7 +55,11 @@ class Spel {
         this.counter = document.getElementById("counter").firstElementChild //counter van pogingen (p-tag)
 
         //spel starten indien voorwaarden van test voldaan zijn
-        if (this.test()) {
+        this.test()
+    }
+    //methode die nagaat of het aantal opgegeven vakjes even is en desnoods een warning weergeeft
+    test() {
+        if (this.aantal % 2 === 0) {
             //warning verbergen
             document.getElementById("alertWarning").classList.replace("alert-show", "alert-hide")
             this.start()
@@ -65,10 +69,6 @@ class Spel {
             //warning laten verdwijnen na 5s
             window.setTimeout(function() {document.getElementById("alertWarning").classList.replace("alert-show", "alert-hide")}, 3000)
         }
-    }
-    //methode die nagaat of het aantal opgegeven vakjes even is
-    test() {
-        return (this.aantal % 2 === 0)
     }
 
     //methode die het spel start
