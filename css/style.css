@@ -4,7 +4,11 @@
     height: 100px;
     margin: 10px;
     padding: 0;
-    transition: transform .25s; /*transition zal gebeuren wanneer de transform property (zie .achterkant) gewijzigd wordt*/
+    -webkit-transition: -webkit-transform .25s;
+    transition: -webkit-transform .25s;
+    -o-transition: transform .25s;
+    transition: transform .25s;
+    transition: transform .25s, -webkit-transform .25s; /*transition zal gebeuren wanneer de transform property (zie .achterkant) gewijzigd wordt*/
     /*display:inline-block*/ /*kon hier ook in plaats van d-flex flex-wrap op de parent div*/
 }
 
@@ -12,6 +16,7 @@
     cursor: pointer;  /* cursor = pointer voor vakjes die je nog kan omdraaien */
     background: url("../images/questionMark.png") no-repeat;
     background-size: cover; /* = 100% 100%*/
+    -webkit-transform: scale(-1, 1) rotateY(180deg);
     transform: scale(-1, 1) rotateY(180deg); /*zorgt ervoor dat vakje een draai-effect krijgt wanneer je erop klikt, want dan zal deze klasse namelijk verwijderd worden van het vakje*/
 }
 /*einde classes vakje*/
@@ -19,11 +24,15 @@
 /*begin classes alert*/
 .alert-hide{
     opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
     transition: opacity 1s;
 }
 
 .alert-show{
     opacity:1;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
     transition: opacity 1s;
 }
 /*einde classes alert*/
