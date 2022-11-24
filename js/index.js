@@ -39,10 +39,7 @@ Array.method("shuffle", function() {
 
 //maakt een nieuw object van de klasse 'Spel' aan; wordt aangeroepen door de 'Maak spel'-knop
 function maakSpel (aantal) {
-    //20 vakjes indien niets meegegeven wordt
-    /*if (aantal === "") {
-        aantal = "20"
-    }*/
+    //20 vakjes indien niets meegegeven wordt aan aantal
     aantal = aantal !== "" ? aantal : "20"
     const spel = new Spel(aantal)
 }
